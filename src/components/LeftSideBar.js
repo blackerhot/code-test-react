@@ -16,7 +16,7 @@ const LeftSideBar = ({ onSorting }) => {
     newFilters[typeFilter] = filter;
     // update history
     setfilters(newFilters);
-
+    // back
     onSorting(filter, filters, typeFilter);
   }
 

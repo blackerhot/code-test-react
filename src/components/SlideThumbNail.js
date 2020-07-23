@@ -29,7 +29,11 @@ const SlideThumbNail = (props) => {
           }
         })}
       </div>
-      <div className="right-side-container ml-2 col">
+      <div className="control-panel">
+        <button onClick={() => onSlide(999)} type="button" className="btn-secondary m-1">next</button>
+        <button onClick={() => onSlide(-999)} type="button" className="btn-secondary">prev</button>
+      </div>
+      <div className="right-side-container col">
         {imgCover.map((img, index) => {
           if (index !== 0) {
             return (
@@ -39,10 +43,6 @@ const SlideThumbNail = (props) => {
             )
           }
         })}
-      </div>
-      <div className="control-panel position-fixed">
-        <button onClick={() => onSlide(999)} type="button" className="btn-secondary">next</button>
-        <button onClick={() => onSlide(-999)} type="button" className="btn-secondary">prev</button>
       </div>
     </div >
   )

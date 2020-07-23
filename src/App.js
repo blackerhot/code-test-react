@@ -12,9 +12,8 @@ const NotFoundPage = () => <h1>NotFoundPage</h1>
 
 function App() {
   return (
-    <div >
-      <Header>
-      </Header>
+    <div>
+      <Header/>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/ListRestaurant/:id" component={InfoRestaurant} />

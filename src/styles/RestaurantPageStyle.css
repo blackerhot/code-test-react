@@ -44,13 +44,15 @@
 }
 
 .img-leftside {
-  width: 100%;
+  width: 800px;
   height: 46vh;
   object-fit: cover;
 }
 
 .control-panel {
-  
+ position: absolute;
+ margin-top: 42vh;
+ margin-left: 30px;
 }
 .card-rest {
   width: 450px !important;
