@@ -30,29 +30,27 @@
 }
 
 .left-side-container {
-  width: 60%;
-  height: 0;
+ 
 }
 
 .right-side-container {
-  width: 40%;
-  height: 0;
+  
 }
 
 .img-rightside {
-  width: 30%;
+  width: 100%;
   height: 15vh;
   object-fit: cover;
 }
 
 .img-leftside {
-  width: 60%;
+  width: 100%;
   height: 46vh;
   object-fit: cover;
 }
 
 .control-panel {
-  position: absolute;
+  
 }
 .card-rest {
   width: 450px !important;
