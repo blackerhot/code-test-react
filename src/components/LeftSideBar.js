@@ -1,16 +1,34 @@
-import React from 'react'
-import '../styles/RestaurantPageStyle.css'
+import React, { useState } from 'react';
+import '../styles/RestaurantPageStyle.css';
+import CheckBoxGroup from './CheckBoxGroup';
+import CategoriesFilter from '../constant/categoriesFilter';
+import NeighborhoodFilter from '../constant/neighborhoodFilter'
 
-const LeftSideBar = () => {
+const LeftSideBar = ({ onSorting }) => {
+  const [filters, setfilters] = useState({
+    category: [],
+    neighborhood: []
+  });
+
+  const handleFilters = (filter, typeFilter) => {
+    const newFilters = { ...filters };
+    // push to category or neightbor
+    newFilters[typeFilter] = filter;
+    // update history
+    setfilters(newFilters);
+
+    onSorting(filter, filters, typeFilter);
+  }
+
   return (
     <div>
-      <div className="form-check pl-5 mb-5" >
-        <input className="form-check-input" type="checkbox" id="autoSizingCheck"></input>
-        <label className="form-check-label">Remember me</label>
+      <div className="d-flex flex-column form-check pl-5" >
+        <label className="form-check-label mb-1">Categories (Optional)</label>
+        <CheckBoxGroup FiltersList={CategoriesFilter} handleFilters={filters => handleFilters(filters, "category")} />
       </div>
-      <div className="form-check pl-5" >
-        <input className="form-check-input" type="checkbox" id="autoSizingCheck"></input>
-        <label className="form-check-label">Remember me</label>
+      <div className="d-flex flex-column form-check pl-5 mt-4" >
+        <label className="form-check-label">Neighborhood (Optional)</label>
+        <CheckBoxGroup FiltersList={NeighborhoodFilter} handleFilters={filters => handleFilters(filters, "neighborhood")} />
       </div>
     </div>
   )

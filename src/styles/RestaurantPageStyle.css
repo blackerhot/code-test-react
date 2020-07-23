@@ -11,7 +11,50 @@
 }
 
 .Right-SideBar {
-  margin-left:15vw;
-
+  margin-left: 15vw;
   width: 85vw; /* Set the width of the sidebar */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 27vh;
+  object-fit: cover;
+}
+
+.ant-checkbox-wrapper {
+  margin-bottom: 0 !important;
+}
+
+.ant-checkbox {
+  margin-right: 5px;
+}
+
+.left-side-container {
+  width: 60%;
+  height: 0;
+}
+
+.right-side-container {
+  width: 40%;
+  height: 0;
+}
+
+.img-rightside {
+  width: 30%;
+  height: 15vh;
+  object-fit: cover;
+}
+
+.img-leftside {
+  width: 60%;
+  height: 46vh;
+  object-fit: cover;
+}
+
+.control-panel {
+  position: absolute;
+}
+.card-rest {
+  width: 450px !important;
+  height: 370px !important;
 }

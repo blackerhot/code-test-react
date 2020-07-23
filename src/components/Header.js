@@ -10,9 +10,9 @@ class Header extends React.Component {
         <Navbar bg="dark" variant="dark" id="Header-Layout">
           <Navbar.Brand as={Link} to="/">Restaurant</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/ListRestaurant">ListRestaurant</Nav.Link>
-            <Nav.Link as={Link} to="/projects">projects</Nav.Link>
-            <Nav.Link as={Link} to="/posts">posts</Nav.Link>
+            <Nav.Link as={Link} to="/listRestaurant">ListRestaurant</Nav.Link>
+            <Nav.Link as={Link} to="/posts">Posts</Nav.Link>
+            <Nav.Link as={Link} to="/test">Test</Nav.Link>
           </Nav>
         </Navbar>
       </div>

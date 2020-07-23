@@ -7,19 +7,17 @@ const PaginationForList = ({ cardPerPage, toTalCards, onPaginate }) => {
     pageNumbers.push(i);
   }
   return (
-    <div>
-      <nav>
-        <ul className="pagination">
-          {pageNumbers.map(number => (
-            <li key={number} className="page-item">
-              <a href="#" onClick={() => onPaginate(number)} className="page-link">
-                {number}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+
+    <ul className="pagination justify-content-center">
+      {pageNumbers.map(number => (
+        <li key={number} className="page-item">
+          <a href="#" onClick={() => onPaginate(number)} className="page-link">
+            {number}
+          </a>
+        </li>
+      ))}
+    </ul>
+
   )
 }
 
